@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
 
   def index
 
-    render :inline => "Test 1"
+     render :template => "entries/index"
     
   end
 

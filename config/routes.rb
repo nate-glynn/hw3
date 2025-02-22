@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # get("/", { :controller => "articles", :action => "index" })
 
   get("/places", {:controller => "places", :action => "index"})
+  get("/newentry", {:controller => "newentry", :action => "index"})
   get("/entries", {:controller => "entries", :action => "index"})
 
 end
