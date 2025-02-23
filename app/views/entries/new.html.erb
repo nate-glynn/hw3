@@ -1,6 +1,6 @@
 <h1>New Entry</h1>
 
-<form action="/entries" method="post">
+<form action="/places/<%= @place["id"] %>/entries" method="post">
   <p>
     <label for="title">Title</label>
     <input type="text" name="title" id="title">

@@ -2,7 +2,10 @@
 
 <ul> 
   <% for place in @places %>
-    <li><%= place["name"] %></li>
+    <li>
+    <%# Creating a link to each place that goes to the entries %>
+    <%= link_to place["name"], "/places/#{place["id"]}" %>
+    </li>
   <% end %>
 </ul>
 
