@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # get("/", { :controller => "articles", :action => "index" })
-
-  resources "places"
-  resources "entries"
   
-  #get("/places", {:controller => "places", :action => "index"})
-  #get("/newentry", {:controller => "newentry", :action => "index"})
-  #get("/entries", {:controller => "entries", :action => "index"})
+  #verify if you need this code
+  root "places#index"
 
+  #Entries will belog to a place, therefore are nested under places. 
+  resources "places" do
+    resources "entries"
+  end
+  
 end
